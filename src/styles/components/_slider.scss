@@ -1,0 +1,34 @@
+.scrollContainer{
+    height: 310vh;
+    position: relative;
+}
+
+.stickyContainer{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.sliderContainer{
+    display: flex;
+    gap: 20px;
+    padding: 0 50vw;
+}
+
+.sliderContainer__slide{
+    width: 100px;
+    height: 300px;
+    filter: grayscale(100%);
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        filter: grayscale(0%);
+        scale: 1.05;
+        cursor: pointer;
+    }
+}
