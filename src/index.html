@@ -14,24 +14,27 @@
     <meta property="og:image:width" content="1800">
     <meta property="og:image:height" content="945">
     <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bfa8yum.css">
     <script src="scripts/app.js" defer></script>
 </head>
 <body>
 
     <main>
 
-        <section>
-            <h1>Les Scroll-addict anonymes</h1>
+        <section class="hero">
+            <h1 class="title">Les Scroll-addict anonymes</h1>
 
-            <p>On sait ce que c’est. La honte quand le médecin regarde ton temps d'écran, la peur que le gouvernement détecte ton 50ᵉ prompt de la journée. Mais comment vivre sans la perfusion de dopamine ?</p>
+            <div class="intro">
+                <p class="bigText">On sait ce que c’est. La honte quand le médecin regarde ton temps d'écran, la peur que le gouvernement détecte ton 50ᵉ prompt de la journée. Mais comment vivre sans la perfusion de dopamine ?</p>
 
-            <p>Bienvenue chez les Scroll-addicts anonymes. Ici, on ne te juge pas, on t’offre une simulation de la vie réelle. À quoi ressemble une journée de 24h quand on ne la passe pas à scroller dans le vide ? Plonge dans notre routine et visualise l'impossible : une vie sans hyperconnexion. Reprends le contrôle sur ta vie avant que le système ne le fasse pour toi.</p>
+                <p class="text">Bienvenue chez les Scroll-addicts anonymes. Ici, on ne te juge pas, on t’offre une simulation de la vie réelle. À quoi ressemble une journée de 24h quand on ne la passe pas à scroller dans le vide ? Plonge dans notre routine et visualise l'impossible : une vie sans hyperconnexion. Reprends le contrôle sur ta vie avant que le système ne le fasse pour toi.</p>
+            </div>
 
-            <button>Scroll down</button>
+            <button class="scrollDown"><a href="#stickyContainer">Scroll down</a></button>
         </section>
 
         <div class="scrollContainer">
-            <div class="stickyContainer">
+            <div class="stickyContainer" id="stickyContainer">
                 <div class="sliderContainer">
                     <img class="sliderContainer__slide" src="assets/images/img-slider.jpg">
                     <img class="sliderContainer__slide" src="assets/images/img-slider.jpg">
