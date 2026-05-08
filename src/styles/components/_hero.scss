@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin: 0 160px;
 }
 
 .title{
@@ -15,7 +13,7 @@
 }
 
 .intro{
-    margin: 0 173px;
+    max-width: 846px;
 }
 
 .bigText{
