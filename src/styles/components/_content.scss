@@ -1,0 +1,37 @@
+.contentContainer{
+    position: relative;
+    display: none;
+    justify-content: center;
+    
+    background-color: $lightBg-color;
+
+    &__content{
+        display: flex;
+        gap: 40px;
+        
+        max-width: 1192px;
+        margin: 0 40px;
+    }
+}
+
+.open{
+    display: flex;
+    flex-direction: column;
+}
+
+.closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.imgSection{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.no-scroll{ /* pour pas que la page continue à scroller*/
+    overflow: hidden;
+}
