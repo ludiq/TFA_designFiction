@@ -19,10 +19,10 @@ window.addEventListener('scroll', syncScroll);
 for (let i = 1; i <= 9; i++){
     const slide = document.querySelector('.sliderContainer__slide--' + i);
     const section = document.querySelector('.contentContainer--' + i);
+
     if (slide && section){
         slide.addEventListener('click', function() {
             section.classList.add('open');
-            body.classList.add('no-scroll');
             console.log("c'est booon")
         });
 
@@ -37,6 +37,49 @@ for (let i = 1; i <= 9; i++){
         }
     }
 }
+
+//HOUR CHANGE
+//code du slider dans codeKit + boucle forEach pour tous les boutons
+const allBtnPrev = document.querySelectorAll('.hourChange__btn--prev');
+const allBtnNext = document.querySelectorAll('.hourChange__btn--next');
+const sectionContainer = document.querySelector('.sectionContainer');
+
+allBtnPrev.forEach(function(btnPrev){
+    btnPrev.addEventListener('click', prevSection);
+});
+
+allBtnNext.forEach(function(btnNext){
+    btnNext.addEventListener('click', nextSection);
+});
+
+function prevSection(){
+    const elShow = document.querySelector('.open');
+    const elPrev = elShow.previousElementSibling;
+
+    elShow.classList.remove('open');
+
+    if(elPrev){
+        elPrev.classList.add('open');
+    }else{
+        const elLast = sectionContainer.lastElementChild;
+        elLast.classList.add('open');
+    }
+}
+
+function nextSection(){
+    const elShow = document.querySelector('.open');
+    const elNext = elShow.nextElementSibling;
+
+    elShow.classList.remove('open');
+
+    if(elNext){
+        elNext.classList.add('open');
+    }else{
+        const elFirst = sectionContainer.firstElementChild;
+        elFirst.classList.add('open');
+    }
+}
+
 
 //FOOTER
 var currentYear = new Date().getFullYear();
