@@ -1,15 +1,34 @@
 "use strict";
 
-//SLIDER
-const sliderContainer = document.querySelector('.sliderContainer');
+//SCROLL HORIZONTAL
+//GSAP -> pour pouvoir utiliser le scrollTrigger pour que le start du scroll soit en top top 
+import { gsap } from "gsap";  
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-// mouvement de translation
-// on prend le sliderContainer et on modifie son transform -> la translationX = le scrollY en px
-function syncScroll() {
-  sliderContainer.style.transform = `translateX(${-window.scrollY}px)`;
+//on calcule la longueur du slider pour connaitre la hauteur du scroll (moins la moitié de l'écran)
+function getScrollAmount() {
+    const sliderContainer = document.querySelector('.sliderContainer');
+    const widthSlider = sliderContainer.scrollWidth; 
+    const widthEcran = window.innerWidth
+    
+    return widthSlider - (widthEcran / 2);
 }
-// écouter le scroll
-window.addEventListener('scroll', syncScroll);
+
+const tween = gsap.to(".sliderContainer", {
+    x:function(){ return -1 * getScrollAmount();},
+    ease: "none",
+});
+
+ScrollTrigger.create({
+    trigger:".scrollContainer",
+    start:"top top",
+    end: function() { return "+=" + getScrollAmount(); },
+    pin:true,
+    animation:tween,
+    scrub:1,
+    markers:true
+})
 
 
 //SECTIONS CONTENT
