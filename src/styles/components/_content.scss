@@ -1,8 +1,13 @@
 .contentContainer{
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 95Vh;
+    overflow-y: auto;
     display: none;
     align-items: center;
-    
+
     background-color: $lightBg-color;
 
     &__content{
@@ -20,10 +25,10 @@
 }
 
 .closeBtn{
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 5vh;
     right: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .imgSection{
@@ -35,8 +40,4 @@
 .hourChange{
     display: flex;
     margin: 80px 0 40px 0;
-}
-
-.no-scroll{ /* pour pas que la page continue à scroller*/
-    overflow: hidden;
 }

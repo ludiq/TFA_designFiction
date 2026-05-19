@@ -38,14 +38,16 @@ ScrollTrigger.create({
 for (let i = 1; i <= 9; i++){
     const slide = document.querySelector('.sliderContainer__slide--' + i);
     const section = document.querySelector('.contentContainer--' + i);
+    const body = document.querySelector('body');
 
     if (slide && section){
         slide.addEventListener('click', function() {
             section.classList.add('open');
-            console.log("c'est booon")
+            body.classList.add('no-scroll');
+            console.log("c'est booon");
         });
 
-        //section et pas document.querySelector pour chercher que la croix qui est dans la section
+        //section et pas document.querySelector pour chercher juste la croix qui est dans la section
         const closeBtn = section.querySelector('.closeBtn');
 
         if (closeBtn){
@@ -58,7 +60,7 @@ for (let i = 1; i <= 9; i++){
 }
 
 //HOUR CHANGE
-//code du slider dans codeKit + boucle forEach pour tous les boutons
+//code du slider dans codeKit + boucle forEach pour tous les boutons sinon le queryselector prend que les btn de la première section
 const allBtnPrev = document.querySelectorAll('.hourChange__btn--prev');
 const allBtnNext = document.querySelectorAll('.hourChange__btn--next');
 const sectionContainer = document.querySelector('.sectionContainer');
