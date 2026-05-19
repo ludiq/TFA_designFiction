@@ -1,11 +1,4 @@
 .scrollContainer{
-    height: 310vh;
-    position: relative;
-}
-
-.stickyContainer{
-    position: sticky;
-    top: 0;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -16,7 +9,7 @@
 .sliderContainer{
     display: flex;
     gap: 20px;
-    padding: 0 50vw;
+    padding: 0 0 0 50vw;
 
     &__slide{
         width: 100px;
