@@ -48,7 +48,7 @@ for (let i = 1; i <= 9; i++){
         });
 
         //section et pas document.querySelector pour chercher juste la croix qui est dans la section
-        const closeBtn = section.querySelector('.closeBtn');
+        const closeBtn = section.querySelector('.btn--close');
 
         if (closeBtn){
             closeBtn.addEventListener('click', function() {

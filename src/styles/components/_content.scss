@@ -9,6 +9,7 @@
     align-items: center;
 
     background-color: $lightBg-color;
+    border-radius: 20px 20px 0 0;
 
     &__content{
         display: flex;
@@ -24,11 +25,35 @@
     flex-direction: column;
 }
 
-.closeBtn{
-    position: fixed;
-    top: 5vh;
-    right: 0;
+.btn{
+    width: 50px;
+    background-color: transparent;
+    border: none;
+
     z-index: 10;
+    cursor: pointer;
+
+    &--img{
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover .btn--img{
+        fill: $text-color;
+    }
+
+    &--close{
+        position: fixed;
+        top: 7vh;
+        right: 1.2vw;
+    }
+}
+
+.accessibility{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .imgSection{
