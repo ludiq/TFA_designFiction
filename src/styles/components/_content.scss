@@ -1,3 +1,5 @@
+@use '../utils/variables' as *;
+
 .contentContainer{
     position: fixed;
     bottom: 0;
@@ -14,7 +16,7 @@
     &__content{
         display: flex;
         gap: 40px;
-        
+
         max-width: 1192px;
         margin: 0 40px;
     }

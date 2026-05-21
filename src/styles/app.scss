@@ -1,7 +1,6 @@
-@import 'modern-normalize';
+@use 'modern-normalize';
 
-@import 'utils/variables';
-@import 'components/type';
-@import 'components/slider';
-@import 'components/hero';
-@import 'components/content';
+@use 'components/type';
+@use 'components/slider';
+@use 'components/hero';
+@use 'components/content';

@@ -1,17 +1,15 @@
-"use strict";
-
 //SCROLL HORIZONTAL
-//GSAP -> pour pouvoir utiliser le scrollTrigger pour que le start du scroll soit en top top 
-import { gsap } from "gsap";  
+//GSAP -> pour pouvoir utiliser le scrollTrigger pour que le start du scroll soit en top top
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 //on calcule la longueur du slider pour connaitre la hauteur du scroll (moins la moitié de l'écran)
 function getScrollAmount() {
     const sliderContainer = document.querySelector('.sliderContainer');
-    const widthSlider = sliderContainer.scrollWidth; 
+    const widthSlider = sliderContainer.scrollWidth;
     const widthEcran = window.innerWidth
-    
+
     return widthSlider - (widthEcran / 2);
 }
 
